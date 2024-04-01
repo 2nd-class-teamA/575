@@ -29,28 +29,13 @@ public class servletA extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.setAttribute("room", room);
 		
+		System.out.println(pCount);
+		
+		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/input.jsp");
+		rd.forward(request, response);
+		
 		doPost(request, response);
 		
-//		if(pCount.equals("1")) {
-//			//1人の時の処理
-//			
-//			// プレイヤーを生成して、ランダムに上の句か下の句を選ぶ
-//			int index = new Random().nextInt(2);
-//			Player player = new Player(index);
-//			GameRoom room = new GameRoom(player,index);
-//			
-//			HttpSession session = request.getSession();
-//			session.setAttribute("room", room);
-//			
-//			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/input.jsp");
-//			rd.forward(request, response);
-//			
-//			// 上の句か下の句をランダムでいれる
-//			// 
-//		} else {
-//			//2人の時の処理
-//			
-//		}
 		
 		
 		
@@ -60,6 +45,11 @@ public class servletA extends HttpServlet {
 		// セッションからroomインスタンスを取得
 		HttpSession session = request.getSession();
 		GameRoom room = (GameRoom) session.getAttribute("room");
+		
+		// 入力画面から文を受け取る
+		
+		
+		
 		int index = (int) request.getAttribute("game");
 		
 		// ランダムに上の句か下の句を選ぶ
@@ -70,6 +60,8 @@ public class servletA extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/input.jsp");
 			rd.forward(request, response);
 		}
+		
+		// 全部がnullじゃなかったら結果出力画面へフォワード
 		
 		int pCount = room.getPCount();
 		for(int i = 1; i <= pCount; i++) {

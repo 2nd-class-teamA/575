@@ -14,7 +14,9 @@
 <body>
 <h1>遊ぶ人数を選んでね！</h1>
 
-<input type="button" value="1人" onclick="location.href='/575/servletA?action=1'">
+<% String str = "1"; %>
+
+<input type="button" value="1人" onclick="location.href='/575/servletA?action=<%= str %>'">
 <input type="button" value="2人" onclick="location.href='/575/servletA?action=2'">
 
 </body>
