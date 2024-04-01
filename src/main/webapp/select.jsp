@@ -7,8 +7,9 @@
 <title>人数選択画面</title>
 </head>
 <body>
-遊ぶ人数を選んでね！
-<form action="">
+<h1>遊ぶ人数を選んでね！</h1>
+<input type="button" value="1人" onclick="location.href='/575/servletA'"></button>
+<input type="button" value="2人" onclick="location.href='/575/servletA'"></button>
 
 </form>
 </body>
