@@ -27,9 +27,9 @@ public class servletA extends HttpServlet {
 			//1人の時の処理
 			
 			// プレイヤーを生成して、ランダムに上の句か下の句を選ぶ
-			Player player = new Player();
-			Random r = new Random();
-			GameRoom room = new GameRoom(player,r.nextInt(2));
+			int index = new Random().nextInt(2);
+			Player player = new Player(index);
+			GameRoom room = new GameRoom(player,index);
 			
 			
 			

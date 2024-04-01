@@ -13,5 +13,11 @@ public class GameRoom implements Serializable {
 	}
 	
 	// 空いている配列にCPUを入れる処理
-
+	public void createCPU() {
+		for(int i = 0; i <= 2; i++) {
+			if(room[i] == null) {
+				CPU cpu = new CPU(i);
+			}
+		}
+	}
 }
