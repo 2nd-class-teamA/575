@@ -3,16 +3,15 @@ package model;
 import java.io.Serializable;
 
 public class GameRoom implements Serializable {
+	
+	// 0:上の句 1:下の句 2:真ん中の句
 	private User[] room = new User[3];
 	
-	public GameRoom(CPU cpu) {
-		// 配列の真ん中にCPUを格納する
-		this.room[1] = cpu;
+	// プレイヤーを配列に格納する
+	public GameRoom(Player p, int i) {
+		room[i] = p;
 	}
 	
-	// ランダムで上の句か下の句を選択し、ユーザーを格納する
-	public void random() {
-		
-	}
+	// 空いている配列にCPUを入れる処理
 
 }
