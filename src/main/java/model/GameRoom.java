@@ -6,13 +6,12 @@ public class GameRoom implements Serializable {
 	
 	// 0:上の句 1:下の句 2:真ん中の句
 	private User[] room = new User[3];
-	// 現在のの配列の位置を記憶する変数
-	int ptr = 0;
+	// プレイヤーの人数を管理する変数
+	private int pCount = 0;
 	
-	
-	// プレイヤーを配列に格納する
-	public GameRoom(Player p, int i) {
-		room[i] = p;
+	// プレイヤーの人数を設定する
+	public GameRoom(int pCount) {
+		this.pCount = pCount;
 	}
 	
 	// 空いている配列にCPUを入れる処理
@@ -22,5 +21,23 @@ public class GameRoom implements Serializable {
 				CPU cpu = new CPU(i);
 			}
 		}
+	}
+	
+	// プレイヤーの人数を取得する
+	public int getPCount() {
+		return this.pCount;
+	}
+	
+	// プレイヤーが入った配列を取得する
+	public User[] getRoom() {
+		return this.room;
+	}
+	
+	// プレイヤーが入った配列のnullチェック
+	public boolean isNull(int i) {
+		if(room[i] == null) {
+			return true;
+		}
+		return false;
 	}
 }
