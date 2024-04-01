@@ -5,6 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>人数選択画面</title>
+<style>
+ body{
+ text-align:center;
+ }
+</style>
 </head>
 <body>
 <h1>遊ぶ人数を選んでね！</h1>

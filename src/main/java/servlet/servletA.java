@@ -21,8 +21,10 @@ public class servletA extends HttpServlet {
 		
 		if(pCount.equals("1")) {
 			//1人の時の処理
+			
 		} else {
 			//2人の時の処理
+			
 		}
 		
 		
