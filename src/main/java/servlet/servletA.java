@@ -60,12 +60,13 @@ public class servletA extends HttpServlet {
 		// セッションからroomインスタンスを取得
 		HttpSession session = request.getSession();
 		GameRoom room = (GameRoom) session.getAttribute("room");
+		int index = (int) request.getAttribute("game");
 		
 		// ランダムに上の句か下の句を選ぶ
 		int r = new Random().nextInt(2);
 		if(room.isNull(r)) {
 			request.setAttribute("odai", r);
-			
+			// 入力画面へフォワード
 			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/input.jsp");
 			rd.forward(request, response);
 		}
