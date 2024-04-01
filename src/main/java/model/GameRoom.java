@@ -6,6 +6,9 @@ public class GameRoom implements Serializable {
 	
 	// 0:上の句 1:下の句 2:真ん中の句
 	private User[] room = new User[3];
+	// 現在のの配列の位置を記憶する変数
+	int ptr = 0;
+	
 	
 	// プレイヤーを配列に格納する
 	public GameRoom(Player p, int i) {

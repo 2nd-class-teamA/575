@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.GameRoom;
 import model.Player;
@@ -31,6 +32,8 @@ public class servletA extends HttpServlet {
 			Player player = new Player(index);
 			GameRoom room = new GameRoom(player,index);
 			
+			HttpSession session = request.getSession();
+			session.setAttribute("room", room);
 			
 			
 			// 上の句か下の句をランダムでいれる
