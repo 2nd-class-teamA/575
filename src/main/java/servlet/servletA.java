@@ -16,6 +16,16 @@ public class servletA extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 人数をリクエストパラメータから受け取る
+		String pCount = request.getParameter("action");
+		
+		if(pCount.equals("1")) {
+			//1人の時の処理
+		} else {
+			//2人の時の処理
+		}
+		
+		
 		RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/jsp/input.jsp");
 		rd.forward(request, response);
 	}

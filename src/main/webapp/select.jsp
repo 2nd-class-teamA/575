@@ -8,8 +8,13 @@
 </head>
 <body>
 <h1>遊ぶ人数を選んでね！</h1>
+<<<<<<< HEAD
 <input type="button" value="1人" onclick="location.href='/575/servletA'">
 <input type="button" value="2人" onclick="location.href='/575/servletA'">
+=======
+<input type="button" value="1人" onclick="location.href='/575/servletA?action=1'">
+<input type="button" value="2人" onclick="location.href='/575/servletA?action=2'">
+>>>>>>> branch 'main' of https://github.com/2nd-class-teamA/575.git
 
 </body>
 </html>
