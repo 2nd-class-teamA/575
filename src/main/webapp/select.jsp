@@ -8,9 +8,8 @@
 </head>
 <body>
 <h1>遊ぶ人数を選んでね！</h1>
-<input type="button" value="1人" onclick="location.href='/575/servletA'"></button>
-<input type="button" value="2人" onclick="location.href='/575/servletA'"></button>
+<input type="button" value="1人" onclick="location.href='/575/servletA'">
+<input type="button" value="2人" onclick="location.href='/575/servletA'">
 
-</form>
 </body>
 </html>
